@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(62, 71, 110, 0.7),rgba(10, 17, 45, 0.7)),url(img/01.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f4f96f;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+}
+.text-box h1{
+        font-size: 42px;
+        font-weight: 600;
+        padding-top: 120px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 23px;
+    color: #ebbfbf;
+    text-shadow: 1px 0 0 #ebbfbf;
+}
+
+nav .fa{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box{
+        width: 80%;
+        color: #fff;
+        text-align: center;
+        margin-top: 50px;
+        margin-right: 20px;
+    }
+    .text-box h1{
+            font-size: 24px;
+            font-weight: 600;
+    }
+    .text-box p{
+        margin: 10px 0 40px;
+        font-size: 15px;
+        color: #ebbfbf;
+        text-shadow: 1px 0 0 #ebbfbf;
+    }
+    nav img{
+        margin-top: 10px;
+        width: 60px;
+        margin-left: 15px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links ul li a{
+        color: #000000;
+    }
+    .nav-links{
+        position: absolute;
+        background: #7ce2ed;
+        height: fit-content;
+        width: 150px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+/*------------------------------------*/
+
+body{
+    background-color: rgb(251, 228, 248);
+    font-family: 'Roboto',sans-serif;
+}
+.form{
+    height: 1100px;
+    width: 600px;
+    margin: auto;
+}
+.required{
+    font-size: 13px;
+    color: red;
+}
+.title-div{
+    height: 150px;
+    width: 650px;
+    background-color: #fff;
+    margin: 15px;
+    border-radius:8px;
+    border-top:8px solid #6703c4;
+    padding: 25px;
+
+}
+.name-div,.college-div,.email-div,.mobile-div,.review-div,.inquiry-div{
+    height: 150px;
+    width: 650px;
+    background-color: white;
+    margin: 15px;
+    border-radius:8px;
+    border-radius:8px;
+    padding: 25px;
+}
+.name{
+    padding-top: 20px;
+    padding-left: 2px;
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+.input.div{
+    padding-top: 25px;
+    padding-left: 25px;
+
+}
+.input-div input{
+    width: 300px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1.5px solid #DCD7D7;
+    font-size: 18px;
+}
+.btn{
+    height: 36px;
+    width: 100px;
+    background-color: #6703c4;
+    border-radius:5px;
+    font-size:14px;
+    letter-spacing:0.5px;
+    font-weight:540;
+    border:none;
+    padding: 10px;
+    position: absolute;
+    margin: 15px;
+    color: white;
+
+}
+.last-div h2{
+    text-align: center;
+    padding-top: 10px;
+    color: #a2a4a6;
+    font-weight: 200;
+
+}
+.term{
+    font-size: 12px;
+    padding-left: 65px;
+    padding-top: 5px;
+    position: absolute;
+}
+.never{
+    padding-left: 15px;
+    font-size: 12px;
+    padding-top: 70px;
+    font-weight: 400;
+
+}
+
+@media(max-width:700px){
+    .title-div{
+        height: 150px;
+        width: 47%;
+        margin: 15px;
+        font-size: 12px;
+    }
+    .name-div,.college-div,.email-div,.mobile-div,.review-div,.inquiry-div{
+        height: 150px;
+        width: 47%;
+    }
+}
+

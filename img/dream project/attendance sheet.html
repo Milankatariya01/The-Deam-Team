@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Attendance Sheet</title>
+        <script>
+            function calculateTotal(){
+            var totalStudents =
+            document.getElementsByClassName('student').length;
+            
+            document.getElementById('total').innerHTML=totalStudents;}
+            </script>
+        <style>
+            table {
+                border-collapse: collapse;
+                width:100%;
+            }
+
+            th,td {
+                padding:8px;
+                text-align:center;
+                border:3px solid black;
+            }
+
+            th {
+                background-color: #ffcc00;
+                color:white;
+            }
+
+            tr:nth-child(even){
+                background-color: #ADD8E6;
+
+            }
+            tr:hover{
+                background-color: #ffffcc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Attendance Sheet</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Attendance Sheet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Student 1</td>
+                    <td>present</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>Absent</td>
+                </tr>
+                <tr>
+                    <td>Student</td>
+                    <td>present</td>
+                </tr>
+                <tr>
+                    <td>Student 4</td>
+                    <td>present</td>
+                </tr>
+                <tr>
+                    <td>student 5</td>
+                    <td>Absent</td>
+                </tr>
+                <!--Add more rows and cells for each student-->
+            </tbody>
+        </table>
+        <table>
+            <tfoot>
+                <tr>
+                    <td>Total Attendance:</td>
+                    <td id="totalAttendance"></td>
+                </tr>
+                <tr>
+                    <td>Absence students:</td>
+                    <td id="AbsencStudents"></td>
+                </tr>
+                <tr>
+                    <td>present students:</td>
+                    <td id="presentStudents"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>Total Students:
+            <span id="total">
+            </span>
+            </p>
+            <button on click="calculateTotal()">CalculateTotal
+            </button>
+        <script>
+            //javaScript code to calculate attendance statistics
+            
+            window.addEventlistener('DOMContentLoaded',function(){
+                var totalAttendance = document.getElementById('totalAttendance');
+                var absenceStudents = document.getElementById('absenceStudents');
+                var presentStudents = document.getElementById('presrntStudents');
+                var attendanceRows = document.querySelectorAll('tbody tr');
+
+                totalAttendance.textContent = attendanceRows.length;
+
+                var adsentCount = 0;
+                var presentCount = 0;
+
+                attendanceRows
+
+            })
+        </script>
+    </body>
+</html>
